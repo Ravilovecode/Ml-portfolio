@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+
+section {
+    padding-top: 60px;
+}
+
+.robot-img {
+    max-width: 100%;
+    height: auto;
+    animation: levitate-animation 5s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes levitate-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px); /* Adjust the distance the robot should move up */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.robot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url(./istockphoto-1479265391-1024x1024-transformed.jpeg);
+    
+    
+}
+
+#home * {
+    position: relative;
+    z-index: 1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+#home .content {
+    position: relative;
+    z-index: 2;
+}
+
+#home h1, #home p {
+    color: white;
+}
+
+#home .btn-primary {
+    z-index: 2;
+}
+
+.type-effect {
+    overflow: hidden;
+    white-space: pre-line;
+    margin: 0;
+    padding: 0;
+}
+
+.text-white {
+    color: aqua !important;
+}
+
+.fancy-font {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+#about {
+    background-image: url('./robot about me cover.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.text-center {
+    text-align: center !important;
+    margin: 0;
+    height: auto;
+    z-index: 3;
+}
+
+
+.card-img-top {
+    height: 350px;
+    border-radius: 20px;
+}
+
+.card{
+    border-radius: 20px;
+}
